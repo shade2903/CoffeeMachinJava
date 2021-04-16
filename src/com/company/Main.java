@@ -46,7 +46,8 @@ public class Main {
                     break;
                 case 7:
                     // иформация
-                    System.out.println("Производитель: "+cm.getClass()+);
+                    System.out.println("Производитель: "+cm.getClass()+"Объем воды: " +
+                           cm.watter + "Объем кофе: " + cm.cofee);
                     break;
                 case 8:
                     // выключить кофе машину
