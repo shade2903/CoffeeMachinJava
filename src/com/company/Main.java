@@ -7,11 +7,25 @@ public class Main {
     public static void main(String[] args) {
         CoffeMachin cm = new CoffeMachin();
         Scanner in = new Scanner(System.in);
+        int brand = 0;
+        while(brand !=1&& brand!=3 && brand!=2) {
         System.out.println("Выберите марку машины:");
         System.out.println("1.Samsung");
         System.out.println("2.Filips");
         System.out.println("3.Redmond");
-        int brand = in.nextInt();
+             brand = in.nextInt();
+
+           if (brand == 1) {
+               Samsung cofeeMachin = new Samsung();
+           } else if (brand == 2) {
+               Philips cofeeMachin = new Philips();
+           } else if (brand == 3) {
+               Redmond cofeeMachin = new Redmond();
+           } else {
+               System.out.println("Не корректный ввод");
+               break;
+           }
+       }
 
         int n =0;
         while (n !=8){
