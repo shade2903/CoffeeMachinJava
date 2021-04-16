@@ -19,10 +19,10 @@ public class Main {
             System.out.println("2. Приготовить Американо");
             System.out.println("3. Приготовить Эспрессо");
             System.out.println("4. Приготовить Двойной эспрессо");
-            System.out.println("5. Заполнить бак водой");
-            System.out.println("6. Заполнить бак водой");
-            System.out.println("7. Заполнить бак водой");
-            System.out.println("8. Заполнить бак водой");
+            System.out.println("5. Заполнить бак с водой");
+            System.out.println("6. Заполнить бак с кофе");
+            System.out.println("7. Информация");
+            System.out.println("8. Выключить кофемашину");
 
             n = in.nextInt();
             switch (n){
@@ -46,8 +46,8 @@ public class Main {
                     break;
                 case 7:
                     // иформация
-                    System.out.println("Производитель: "+cm.getClass()+"Объем воды: " +
-                           cm.watter + "Объем кофе: " + cm.cofee);
+                    System.out.println("Производитель: "+cm.getClass()+" Объем воды: " +
+                           cm.watter + " Объем кофе: " + cm.cofee);
                     break;
                 case 8:
                     // выключить кофе машину

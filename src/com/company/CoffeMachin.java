@@ -1,6 +1,6 @@
 package com.company;
 
-public class CoffeMachin {
+public class  CoffeMachin {
     double watter = 2;
     double cofee = 1;
     public void makeCoffe(){
