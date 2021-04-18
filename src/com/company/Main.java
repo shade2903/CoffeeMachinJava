@@ -5,30 +5,32 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        CoffeMachin cm = new CoffeMachin();
+        CoffeMachin cofeeMachin = new CoffeMachin();
+
         Scanner in = new Scanner(System.in);
         int brand = 0;
-        while(brand !=1&& brand!=3 && brand!=2) {
-        System.out.println("Выберите марку машины:");
-        System.out.println("1.Samsung");
-        System.out.println("2.Filips");
-        System.out.println("3.Redmond");
-             brand = in.nextInt();
+        while (brand != 1 && brand != 3 && brand != 2) {
+            System.out.println("Выберите марку машины:");
+            System.out.println("1.Samsung");
+            System.out.println("2.Philips");
+            System.out.println("3.Redmond");
+            brand = in.nextInt();
+            cofeeMachin = new Philips();
 
-           if (brand == 1) {
-               Samsung cofeeMachin = new Samsung();
-           } else if (brand == 2) {
-               Philips cofeeMachin = new Philips();
-           } else if (brand == 3) {
-               Redmond cofeeMachin = new Redmond();
-           } else {
-               System.out.println("Не корректный ввод");
-               break;
-           }
-       }
+            if (brand == 1) {
+                cofeeMachin = new Samsung();
+            } else if (brand == 2) {
+                cofeeMachin = new Philips();
+            } else if (brand == 3) {
+                cofeeMachin = new Redmond();
+            } else {
+                System.out.println("Не корректный ввод");
+                break;
+            }
+        }
 
-        int n =0;
-        while (n !=8){
+        int n = 0;
+        while (n != 8) {
             System.out.println("1. Показать текущий объем воды и кофе");
             System.out.println("2. Приготовить Американо");
             System.out.println("3. Приготовить Эспрессо");
@@ -39,29 +41,32 @@ public class Main {
             System.out.println("8. Выключить кофемашину");
 
             n = in.nextInt();
-            switch (n){
+            switch (n) {
                 case 1:
-                    System.out.println("Вода: " +cm.watter + " Кофе: " + cm.cofee);
+                    System.out.println("Вода: " + cofeeMachin.watter + " Кофе: " + cofeeMachin.cofee);
                     break;
                 case 2:
-                    // делаем американо
+                    cofeeMachin.makeAmericano();
                     break;
                 case 3:
                     // делаем экспрессо
+                    cofeeMachin.makeEspresso();
                     break;
                 case 4:
                     // делаем двойной экспрессо
+                    cofeeMachin.makeDoubleEspresso();
                     break;
                 case 5:
                     // заполняем бак водой
+                    cofeeMachin.fillWatter();
                     break;
                 case 6:
                     // заполняем бак кофе
+                    cofeeMachin.fillCoffee();
                     break;
                 case 7:
                     // иформация
-                    System.out.println("Производитель: "+cm.getClass()+" Объем воды: " +
-                           cm.watter + " Объем кофе: " + cm.cofee);
+                    cofeeMachin.info();
                     break;
                 case 8:
                     // выключить кофе машину
