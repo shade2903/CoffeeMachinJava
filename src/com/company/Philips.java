@@ -1,10 +1,10 @@
 package com.company;
 
-public class Philips extends CoffeMachin {
+public class Philips extends CoffeMachin implements FillableCoffee,FillableWatter,Informational {
     public Philips() {
         super();
-        this.cofee=2.0;
-        this.watter=4.0;
+        this.coffee=2.0f;
+        this.watter=4.0f;
     }
 
     @Override
@@ -14,10 +14,10 @@ public class Philips extends CoffeMachin {
     }
     @Override
     public double fillWatter(){
-        return watter=4.0;
+        return watter=4.0f;
     }
     @Override
     public double fillCoffee(){
-        return cofee=2.0;
+        return coffee=2.0f;
     }
 }

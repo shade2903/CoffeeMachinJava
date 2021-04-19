@@ -1,10 +1,11 @@
 package com.company;
 
 public class Samsung extends CoffeMachin {
+
     public Samsung() {
         super();
-        this.cofee=3.0;
-        this.watter=6.0;
+        this.coffee=3.0f;
+        this.watter=6.0f;
     }
 
     @Override
@@ -14,10 +15,10 @@ public class Samsung extends CoffeMachin {
     }
     @Override
     public double fillWatter(){
-        return watter=6.0;
+        return watter=6.0f;
     }
     @Override
     public double fillCoffee(){
-        return cofee=3.0;
+        return coffee=3.0f;
     }
 }

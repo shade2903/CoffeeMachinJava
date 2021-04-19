@@ -3,8 +3,8 @@ package com.company;
 public class Redmond extends CoffeMachin {
     public Redmond() {
         super();
-        this.cofee=2.5;
-        this.watter=5.0;
+        this.coffee=2.5f;
+        this.watter=5.0f;
     }
 
     @Override
@@ -14,10 +14,10 @@ public class Redmond extends CoffeMachin {
     }
     @Override
     public double fillWatter(){
-        return watter=5.0;
+        return watter=5.0f;
     }
     @Override
     public double fillCoffee(){
-        return cofee=2.5;
+        return coffee=2.5f;
     }
 }
