@@ -1,10 +1,10 @@
 package com.company;
 
-public abstract class  CoffeMachin implements Informational,FillableWatter,FillableCoffee {
+public abstract class CoffeeMachine implements Informational,FillableWatter,FillableCoffee {
      float watter ;
      float coffee ;
 
-    public CoffeMachin() {
+    public CoffeeMachine() {
     }
 
     public void makeAmericano(){

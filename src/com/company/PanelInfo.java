@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class PanelInfo {
 
     public void panelInfo() {
-        CoffeMachin cofeeMachin = null;
+        CoffeeMachine cofeeMachin = null;
 
         Scanner in = new Scanner(System.in);
         int brand = 0;

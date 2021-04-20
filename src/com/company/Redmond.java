@@ -1,6 +1,6 @@
 package com.company;
 
-public class Redmond extends CoffeMachin {
+public class Redmond extends CoffeeMachine {
     public Redmond() {
         super();
         this.coffee=2.5f;

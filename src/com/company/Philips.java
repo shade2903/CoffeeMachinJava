@@ -1,6 +1,6 @@
 package com.company;
 
-public class Philips extends CoffeMachin implements FillableCoffee,FillableWatter,Informational {
+public class Philips extends CoffeeMachine implements FillableCoffee,FillableWatter,Informational {
     public Philips() {
         super();
         this.coffee=2.0f;

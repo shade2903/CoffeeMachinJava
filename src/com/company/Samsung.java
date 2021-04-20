@@ -1,6 +1,6 @@
 package com.company;
 
-public class Samsung extends CoffeMachin {
+public class Samsung extends CoffeeMachine {
 
     public Samsung() {
         super();
