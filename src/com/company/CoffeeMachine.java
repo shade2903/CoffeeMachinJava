@@ -1,6 +1,7 @@
 package com.company;
 
 public abstract class CoffeeMachine implements Informational,FillableWatter,FillableCoffee {
+    String name;
      float watter ;
      float coffee ;
 
