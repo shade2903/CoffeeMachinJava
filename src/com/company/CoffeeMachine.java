@@ -4,8 +4,21 @@ public abstract class CoffeeMachine implements Informational,FillableWatter,Fill
     String name;
      float watter ;
      float coffee ;
+     float tankMaxWatter;
+     float tankMaxCoffee;
 
     public CoffeeMachine() {
+    }
+    @Override
+    public void info() {
+
+        System.out.print("Brand: ");
+        System.out.print(name);
+        System.out.print( " Watter = ");
+        System.out.print(tankMaxWatter);
+        System.out.print(" Coffee = ");
+        System.out.println(tankMaxCoffee);
+
     }
 
     public void makeAmericano(){
@@ -45,18 +58,15 @@ public abstract class CoffeeMachine implements Informational,FillableWatter,Fill
 
     }
 
-    @Override
-    public void info() {
 
-    }
 
     @Override
     public double fillCoffee() {
-        return 0;
+        return coffee = tankMaxCoffee;
     }
 
     @Override
     public double fillWatter() {
-        return 0;
+        return watter= tankMaxWatter;
     }
 }
