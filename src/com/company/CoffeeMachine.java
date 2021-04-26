@@ -6,6 +6,8 @@ public abstract class CoffeeMachine implements Informational,FillableWatter,Fill
      float coffee ;
      float tankMaxWatter;
      float tankMaxCoffee;
+     float ingridientWatter= 0.2f ;
+     float ingridientCofee=0.2f;
 
     public CoffeeMachine() {
     }
@@ -22,37 +24,37 @@ public abstract class CoffeeMachine implements Informational,FillableWatter,Fill
     }
 
     public void makeAmericano(){
-       if((watter-0.5)>0 && (coffee-0.2)>0){
+       if((watter-2.5*ingridientWatter)>0 && (coffee-ingridientCofee)>0){
            watter = watter-0.5f;
-           coffee = coffee - 0.2f;
+           coffee = coffee - ingridientCofee;
            System.out.println("Ваш американо готов");
-       } else if((watter-0.5)<=0){
+       } else if((watter-2.5*ingridientWatter)<=0){
            System.out.println("Не хватает воды.Заполните бак водой");
-       } else if((coffee-0.2)<=0) {
+       } else if((coffee-ingridientCofee)<=0) {
            System.out.println("Не хватает кофе.Заполните бак кофе");
        }
 
     }
     public void makeEspresso(){
-        if((watter-0.2)>0 && (coffee-0.2)>0){
-            watter = watter-0.2f;
-            coffee = coffee - 0.2f;
+        if((watter-ingridientWatter)>0 && (coffee-ingridientCofee)>0){
+            watter = watter-ingridientWatter;
+            coffee = coffee - ingridientCofee;
             System.out.println("Ваш эспрессо готов");
-        } else if((watter-0.2)<=0){
+        } else if((watter-ingridientWatter)<=0){
             System.out.println("Не хватает воды.Заполните бак водой");
-        } else if((coffee-0.2)<=0) {
+        } else if((coffee-ingridientCofee)<=0) {
             System.out.println("Не хватает кофе.Заполните бак кофе");
         }
 
     }
     public void makeDoubleEspresso(){
-        if((watter-0.4)>0 && (coffee-0.4)>0){
-            watter = watter-0.4f;
-            coffee = coffee - 0.4f;
+        if((watter-2*ingridientWatter)>0 && (coffee-2*ingridientCofee)>0){
+            watter = watter-2*ingridientWatter;
+            coffee = coffee - 2*ingridientWatter;
             System.out.println("Ваш двойной эспрессо готов");
-        } else if((watter-0.4)<=0){
+        } else if((watter-2*ingridientWatter)<=0){
             System.out.println("Не хватает воды.Заполните бак водой");
-        } else if((coffee-0.4)<=0) {
+        } else if((coffee-2*ingridientCofee)<=0) {
             System.out.println("Не хватает кофе.Заполните бак кофе");
         }
 
