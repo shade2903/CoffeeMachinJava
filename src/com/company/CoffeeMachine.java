@@ -21,7 +21,7 @@ public abstract class CoffeeMachine implements Informational,FillableWatter,Fill
         System.out.println(tankMaxCoffee);
 
     }
-    public void makeCofee(float ingridientWatter, float ingridientCofee){
+    public void makeCoffee(float ingridientWatter, float ingridientCofee){
         if((watter-ingridientWatter)>0 && (coffee-ingridientCofee)>0){
             watter = watter-ingridientWatter;
             coffee = coffee - ingridientCofee;
@@ -35,15 +35,15 @@ public abstract class CoffeeMachine implements Informational,FillableWatter,Fill
     }
 
     public void makeAmericano(){
-       makeCofee(0.5f,0.2f);
+       makeCoffee(0.5f,0.2f);
 
     }
     public void makeEspresso(){
-        makeCofee(0.2f,0.2f);
+        makeCoffee(0.2f,0.2f);
 
     }
     public void makeDoubleEspresso(){
-        makeCofee(0.4f,0.4f);
+        makeCoffee(0.4f,0.4f);
 
     }
 
